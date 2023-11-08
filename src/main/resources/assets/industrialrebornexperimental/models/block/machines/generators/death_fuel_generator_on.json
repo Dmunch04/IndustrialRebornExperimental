@@ -1,0 +1,9 @@
+{
+  "parent": "minecraft:block/orientable",
+  "textures": {
+    "top": "industrialrebornexperimental:block/machines/generators/death_generator_top",
+    "bottom": "industrialrebornexperimental:block/machines/generators/death_generator_bottom",
+    "side": "industrialrebornexperimental:block/machines/generators/death_generator_side",
+    "front": "industrialrebornexperimental:block/machines/generators/death_generator_side_on"
+  }
+}

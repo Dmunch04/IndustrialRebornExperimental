@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "BBB",
+    "BPB",
+    "EGE"
+  ],
+  "key": {
+    "E": {
+      "item": "techreborn:electronic_circuit"
+    },
+    "G": {
+      "item": "techreborn:solid_fuel_generator"
+    },
+    "B": {
+      "item": "minecraft:bone_block"
+    },
+    "P": {
+      "item": "minecraft:ender_pearl"
+    }
+  },
+  "result": {
+    "item": "industrialrebornexperimental:death_fuel_generator"
+  }
+}

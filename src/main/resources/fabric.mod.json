@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "id": "industrialrebornexperimental",
+  "version": "${version}",
+  "name": "Industrial Reborn: Experimental",
+  "description": "Experimental stuff for Industrial Reborn",
+  "authors": [
+    "munchii"
+  ],
+  "contact": {
+    "repo": "https://github.com/Dmunch04/IndustrialRebornExperimental"
+  },
+  "license": "MIT",
+  "icon": "assets/industrialrebornexperimental/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "client": [
+      "me.munchii.industrialrebornexperimental.client.IndustrialRebornExperimentalClient"
+    ],
+    "main": [
+      "me.munchii.industrialrebornexperimental.IndustrialRebornExperimental"
+    ]
+  },
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}
