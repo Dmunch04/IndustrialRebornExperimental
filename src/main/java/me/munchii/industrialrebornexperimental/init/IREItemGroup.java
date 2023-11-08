@@ -29,6 +29,8 @@ public class IREItemGroup {
         entries.add(IREContent.EMPTY_SOUL_VIAL);
 
         addContent(IREContent.Machine.values(), entries);
+
+        entries.add(IREContent.BROKEN_SPAWNER);
     }
 
     private static void addContent(ItemConvertible[] items, FabricItemGroupEntries entries) {
