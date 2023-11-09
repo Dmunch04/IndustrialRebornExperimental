@@ -1,0 +1,22 @@
+{
+  "type": "industrialrebornexperimental:soul_fuser",
+  "power": 10,
+  "time": 500,
+  "ingredients": [
+    {
+      "item": "industrialrebornexperimental:filled_soul_vial"
+    },
+    {
+      "item": "minecraft:dirt",
+      "count": 2
+    }
+  ],
+  "results": [
+    {
+      "item": "minecraft:podzol"
+    },
+    {
+      "item": "industrialrebornexperimental:empty_soul_vial"
+    }
+  ]
+}

@@ -3,6 +3,7 @@ package me.munchii.industrialrebornexperimental;
 import me.munchii.industrialrebornexperimental.init.IREBlockEntities;
 import me.munchii.industrialrebornexperimental.init.IREContent;
 import me.munchii.industrialrebornexperimental.init.IREItemGroup;
+import me.munchii.industrialrebornexperimental.init.IRERecipes;
 import me.munchii.industrialrebornexperimental.items.SoulVialItem;
 import me.munchii.industrialrebornexperimental.utils.Resources;
 import net.minecraft.block.Block;
@@ -19,6 +20,7 @@ public class RegistryManager {
         registerBlocks();
         registerItems();
 
+        IRERecipes.init();
         IREBlockEntities.init();
         IREItemGroup.register();
     }

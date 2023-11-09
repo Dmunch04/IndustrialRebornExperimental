@@ -11,4 +11,10 @@ public class IndustrialRebornConfig {
 
     @Config(config = "generators", category = "death_generator", key = "DeathGeneratorEnergyPerTick", comment = "Death Generator Energy Per Tick")
     public static int deathGeneratorEnergyPerTick = 20;
+
+    @Config(config = "machines", category = "soul_fuser", key = "SoulFuserInput", comment = "Soul Fuser Max Input (Energy per tick")
+    public static int soulFuserMaxInput = 128;
+
+    @Config(config = "machines", category = "soul_fuser", key = "SoulFuserMaxEnergy", comment = "Soul Fuser Max Energy")
+    public static int soulFuserMaxEnergy = 100_000;
 }

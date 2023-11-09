@@ -1,6 +1,7 @@
 package me.munchii.industrialrebornexperimental.init;
 
 import me.munchii.industrialrebornexperimental.blockentity.DeathFuelGeneratorBlockEntity;
+import me.munchii.industrialrebornexperimental.blockentity.SoulFuserBlockEntity;
 import me.munchii.industrialrebornexperimental.utils.Resources;
 import net.fabricmc.fabric.api.object.builder.v1.block.entity.FabricBlockEntityTypeBuilder;
 import net.minecraft.block.Block;
@@ -23,6 +24,7 @@ public class IREBlockEntities {
     private static final List<BlockEntityType<?>> TYPES = new ArrayList<>();
 
     public static final BlockEntityType<DeathFuelGeneratorBlockEntity> DEATH_FUEL_GENERATOR = register(DeathFuelGeneratorBlockEntity::new, "death_fuel_generator", IREContent.Machine.DEATH_FUEL_GENERATOR);
+    public static final BlockEntityType<SoulFuserBlockEntity> SOUL_FUSER = register(SoulFuserBlockEntity::new, "soul_fuser", IREContent.Machine.SOUL_FUSER);
 
     public static <T extends BlockEntity> BlockEntityType<T> register(BiFunction<BlockPos, BlockState, T> supplier, String name, ItemConvertible... items) {
         return register(supplier, name, Arrays.stream(items).map(itemConvertible -> Block.getBlockFromItem(itemConvertible.asItem())).toArray(Block[]::new));
