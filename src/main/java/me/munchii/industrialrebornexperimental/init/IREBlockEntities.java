@@ -1,7 +1,9 @@
 package me.munchii.industrialrebornexperimental.init;
 
 import me.munchii.industrialrebornexperimental.blockentity.DeathFuelGeneratorBlockEntity;
+import me.munchii.industrialrebornexperimental.blockentity.PoweredSpawnerBlockEntity;
 import me.munchii.industrialrebornexperimental.blockentity.SoulFuserBlockEntity;
+import me.munchii.industrialrebornexperimental.blockentity.SoulInfuserBlockEntity;
 import me.munchii.industrialrebornexperimental.utils.Resources;
 import net.fabricmc.fabric.api.object.builder.v1.block.entity.FabricBlockEntityTypeBuilder;
 import net.minecraft.block.Block;
@@ -25,6 +27,8 @@ public class IREBlockEntities {
 
     public static final BlockEntityType<DeathFuelGeneratorBlockEntity> DEATH_FUEL_GENERATOR = register(DeathFuelGeneratorBlockEntity::new, "death_fuel_generator", IREContent.Machine.DEATH_FUEL_GENERATOR);
     public static final BlockEntityType<SoulFuserBlockEntity> SOUL_FUSER = register(SoulFuserBlockEntity::new, "soul_fuser", IREContent.Machine.SOUL_FUSER);
+    public static final BlockEntityType<SoulInfuserBlockEntity> SOUL_INFUSER = register(SoulInfuserBlockEntity::new, "soul_infuser", IREContent.Machine.SOUL_INFUSER);
+    public static final BlockEntityType<PoweredSpawnerBlockEntity> POWERED_SPAWNER = register(PoweredSpawnerBlockEntity::new, "powered_spawner", IREContent.Machine.POWERED_SPAWNER);
 
     public static <T extends BlockEntity> BlockEntityType<T> register(BiFunction<BlockPos, BlockState, T> supplier, String name, ItemConvertible... items) {
         return register(supplier, name, Arrays.stream(items).map(itemConvertible -> Block.getBlockFromItem(itemConvertible.asItem())).toArray(Block[]::new));

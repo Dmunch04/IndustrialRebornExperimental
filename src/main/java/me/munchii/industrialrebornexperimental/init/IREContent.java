@@ -1,8 +1,6 @@
 package me.munchii.industrialrebornexperimental.init;
 
-import me.munchii.industrialrebornexperimental.blockentity.DeathFuelGeneratorBlockEntity;
-import me.munchii.industrialrebornexperimental.blockentity.GuiType;
-import me.munchii.industrialrebornexperimental.blockentity.SoulFuserBlockEntity;
+import me.munchii.industrialrebornexperimental.blockentity.*;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemConvertible;
@@ -23,6 +21,8 @@ public class IREContent {
 
     public enum Machine implements ItemConvertible {
         SOUL_FUSER(new GenericMachineBlock(GuiType.SOUL_FUSER, SoulFuserBlockEntity::new)),
+        SOUL_INFUSER(new GenericMachineBlock(GuiType.SOUL_FUSER, SoulInfuserBlockEntity::new)),
+        POWERED_SPAWNER(new GenericMachineBlock(GuiType.POWERED_SPAWNER, PoweredSpawnerBlockEntity::new)),
 
         DEATH_FUEL_GENERATOR(new GenericGeneratorBlock(GuiType.DEATH_GENERATOR, DeathFuelGeneratorBlockEntity::new));
 

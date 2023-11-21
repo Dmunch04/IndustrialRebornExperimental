@@ -3,8 +3,10 @@ package me.munchii.industrialrebornexperimental.client;
 import me.munchii.industrialrebornexperimental.IndustrialRebornExperimental;
 import me.munchii.industrialrebornexperimental.blockentity.DeathFuelGeneratorBlockEntity;
 import me.munchii.industrialrebornexperimental.blockentity.GuiType;
+import me.munchii.industrialrebornexperimental.blockentity.PoweredSpawnerBlockEntity;
 import me.munchii.industrialrebornexperimental.blockentity.SoulFuserBlockEntity;
 import me.munchii.industrialrebornexperimental.client.gui.GuiDeathGenerator;
+import me.munchii.industrialrebornexperimental.client.gui.GuiPoweredSpawner;
 import me.munchii.industrialrebornexperimental.client.gui.GuiSoulFuser;
 import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.client.gui.screen.ingame.HandledScreens;
@@ -20,6 +22,7 @@ public record ClientGuiType<T extends BlockEntity>(GuiType<T> guiType, GuiFactor
 
     public static final ClientGuiType<DeathFuelGeneratorBlockEntity> DEATH_GENERATOR = register(GuiType.DEATH_GENERATOR, GuiDeathGenerator::new);
     public static final ClientGuiType<SoulFuserBlockEntity> SOUL_FUSER = register(GuiType.SOUL_FUSER, GuiSoulFuser::new);
+    public static final ClientGuiType<PoweredSpawnerBlockEntity> POWERED_SPAWNER = register(GuiType.POWERED_SPAWNER, GuiPoweredSpawner::new);
 
     public static <T extends BlockEntity> ClientGuiType<T> register(GuiType<T> type, GuiFactory<T> factory) {
         return new ClientGuiType<>(type, factory);

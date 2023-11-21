@@ -48,9 +48,8 @@ public class DeathFuelGeneratorBlockEntity extends PowerAcceptorBlockEntity impl
             return 0;
         }
 
-        Map<Item, Integer> fuelTimeMap = Stream.of(DeathFuels.values()).collect(Collectors.toMap(data -> data.item, data -> data.burnTime));
-        if (fuelTimeMap.containsKey(stack.getItem())) {
-            return fuelTimeMap.get(stack.getItem()) / 4;
+        if (DeathFuels.FUEL_TIME_MAP.containsKey(stack.getItem())) {
+            return DeathFuels.FUEL_TIME_MAP.get(stack.getItem()) / 4;
         }
 
         return 0;
@@ -180,7 +179,7 @@ public class DeathFuelGeneratorBlockEntity extends PowerAcceptorBlockEntity impl
     @Override
     public BuiltScreenHandler createScreenHandler(int syncID, final PlayerEntity player) {
         return new ScreenHandlerBuilder("death_generator").player(player.getInventory()).inventory().hotbar().addInventory()
-                .blockEntity(this).filterSlot(0, 80, 54, DeathFuelGeneratorBlockEntity::burnableItemFilter)/*.fuelSlot(0, 80, 54)*/.energySlot(1, 8, 72).syncEnergyValue()
+                .blockEntity(this).filterSlot(0, 80, 54, DeathFuelGeneratorBlockEntity::burnableItemFilter).energySlot(1, 8, 72).syncEnergyValue()
                 .sync(this::getBurnTime, this::setBurnTime)
                 .sync(this::getTotalBurnTime, this::setTotalBurnTime).addInventory().create(this, syncID);
     }

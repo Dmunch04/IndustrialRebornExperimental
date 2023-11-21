@@ -1,5 +1,6 @@
 package me.munchii.industrialrebornexperimental.items;
 
+import me.munchii.industrialrebornexperimental.IndustrialRebornExperimental;
 import me.munchii.industrialrebornexperimental.init.IREContent;
 import me.munchii.industrialrebornexperimental.utils.EntityCaptureUtils;
 import me.munchii.industrialrebornexperimental.utils.EntityStorageNBTHelper;
@@ -106,6 +107,8 @@ public class SoulVialItem extends Item {
 
     private static ActionResult releaseEntity(World world, ItemStack filledVial, Direction face, BlockPos pos, Consumer<ItemStack> emptyVialSetter) {
         if (EntityStorageNBTHelper.hasStoredEntity(filledVial)) {
+            IndustrialRebornExperimental.LOGGER.info(filledVial.getNbt().toString());
+            IndustrialRebornExperimental.LOGGER.info(filledVial.getNbt().asString());
             Optional<NbtCompound> entityTag = EntityStorageNBTHelper.getEntityDataCompound(filledVial);
             if (!entityTag.isPresent()) {
                 return ActionResult.FAIL;

@@ -17,4 +17,13 @@ public class IndustrialRebornConfig {
 
     @Config(config = "machines", category = "soul_fuser", key = "SoulFuserMaxEnergy", comment = "Soul Fuser Max Energy")
     public static int soulFuserMaxEnergy = 100_000;
+
+    @Config(config = "machines", category = "powered_spawner", key = "PoweredSpawnerInput", comment = "Powered Spawner Max Input (Energy per tick")
+    public static int poweredSpawnerMaxInput = 512;
+
+    @Config(config = "machines", category = "powered_spawner", key = "PoweredSpawnerMaxEnergy", comment = "Powered Spawner Max Energy")
+    public static int poweredSpawnerMaxEnergy = 1_000_000;
+
+    @Config(config = "machines", category = "powered_spawner", key = "PoweredSpawnerEnergyPerSpawn", comment = "Powered Spawner Energy Per Spawn")
+    public static int poweredSpawnerEnergyPerSpawn = 512;
 }
